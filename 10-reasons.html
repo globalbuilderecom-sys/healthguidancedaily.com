@@ -6,13 +6,13 @@
     <title>10 Reasons Why This "Delivery-First" Probiotic is Changing Evenings for Women 45+</title>
     <meta name="description" content="Discover why women 45+ are switching to Løra Ritual's kelp-armored probiotic for calmer evenings, less bloating, and better gut support.">
 
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-514139113"></script>
+    <!-- Google tag (gtag.js) - GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5NGP4GX72"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-514139113');
+      gtag('config', 'G-L5NGP4GX72');
     </script>
 
     <!-- Facebook Pixel -->
@@ -1542,6 +1542,64 @@
         setInterval(() => {
             moveCarousel(1);
         }, 5000);
+    </script>
+
+    <!-- Enhanced GA4 Event Tracking -->
+    <script>
+      // Track scroll depth
+      let scrollMarkers = [25, 50, 75, 90];
+      let scrollMarkersSent = [];
+
+      window.addEventListener('scroll', function() {
+        let scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+
+        scrollMarkers.forEach(function(marker) {
+          if (scrollPercent >= marker && !scrollMarkersSent.includes(marker)) {
+            scrollMarkersSent.push(marker);
+            gtag('event', 'scroll_depth', {
+              'percent_scrolled': marker,
+              'page_path': window.location.pathname
+            });
+          }
+        });
+      });
+
+      // Track time on page
+      let timeMarkers = [30, 60, 120, 180]; // seconds
+      let timeMarkersSent = [];
+      let startTime = Date.now();
+
+      setInterval(function() {
+        let timeOnPage = Math.round((Date.now() - startTime) / 1000);
+
+        timeMarkers.forEach(function(marker) {
+          if (timeOnPage >= marker && !timeMarkersSent.includes(marker)) {
+            timeMarkersSent.push(marker);
+            gtag('event', 'time_on_page', {
+              'seconds_on_page': marker,
+              'page_path': window.location.pathname
+            });
+          }
+        });
+      }, 5000);
+
+      // Track CTA clicks
+      document.addEventListener('click', function(e) {
+        let link = e.target.closest('a');
+        if (link && link.href && link.href.includes('loraritual.com')) {
+          gtag('event', 'cta_click', {
+            'link_url': link.href,
+            'link_text': link.textContent.trim().substring(0, 50),
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      // Track page identifier for easier filtering
+      gtag('event', 'page_identified', {
+        'page_type': window.location.pathname === '/10-reasons' ? 'listicle' : 'advertorial',
+        'page_path': window.location.pathname
+      });
     </script>
 </body>
 </html>
