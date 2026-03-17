@@ -1,27 +1,9 @@
-# Environment variables
+.next/
+node_modules/
 .env
-.env.*
 .env.local
-.env.*.local
-
-# Credentials
-credentials.json
-config.local.json
-*.pem
-*.key
-
-# OS files
+.env*.local
+.vercel
+out/
 .DS_Store
 Thumbs.db
-
-# Node
-node_modules/
-npm-debug.log*
-
-# IDE
-.vscode/
-.idea/
-
-# Build output
-dist/
-build/
