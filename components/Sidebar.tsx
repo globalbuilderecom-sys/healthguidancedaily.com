@@ -1,4 +1,5 @@
 const CTA_URL = "https://loraritual.com/products/nrx";
+const BASE = "/nrx-nmn";
 
 export function Sidebar() {
   return (
@@ -12,7 +13,7 @@ export function Sidebar() {
           {/* Product image */}
           <div className="hidden md:block w-[200px] mt-2.5 mb-[15px] rounded overflow-hidden">
             <img
-              src="/images/product-bottle.webp"
+              src={`${BASE}/images/product-bottle.webp`}
               alt="NRX NMN® by Løra Ritual"
               className="w-full h-full object-cover rounded"
             />

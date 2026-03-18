@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${playfair.variable} ${sourceSerif.variable} ${dmSans.variable} ${montserrat.variable}`}
     >
-      <body className="bg-[#FAF8F4] text-[#1A1A18] antialiased" style={{ fontFamily: "var(--font-source-serif), Georgia, serif" }}>
+      <body className="bg-[#FAF8F4] text-[#1A1A18] antialiased" style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}>
         {children}
       </body>
     </html>
