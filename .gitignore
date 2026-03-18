@@ -7,3 +7,15 @@ node_modules/
 out/
 .DS_Store
 Thumbs.db
+
+# Next.js source (deploy pre-built static only)
+app/
+components/
+public/
+next.config.js
+next-env.d.ts
+tsconfig.json
+tailwind.config.js
+postcss.config.js
+package.json
+package-lock.json
