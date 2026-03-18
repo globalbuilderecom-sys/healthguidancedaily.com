@@ -1,13 +1,12 @@
 "use client";
 
 const CTA_URL = "https://loraritual.com/products/nrx";
-const BASE = "/nrx-nmn";
 
 // ── Shared helpers ─────────────────────────────────────────────────────────────
 
 function BodyText({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`text-[#4A4A42] text-[17px] leading-[27px] text-left mt-[15px] px-px py-2.5 font-montserrat ${className}`}>
+    <div className={`text-[#4A4A42] text-[17px] leading-[27px] text-left mt-[15px] px-px py-2.5 font-source-serif ${className}`}>
       {children}
     </div>
   );
@@ -67,7 +66,7 @@ function ImgPlaceholder({ src, alt, className = "" }: { src: string; alt: string
   return (
     <div className={`reveal w-full mt-4 mb-2 ${className}`}>
       <img
-        src={`${BASE}${src}`}
+        src={src}
         alt={alt}
         className="max-w-full w-full rounded"
         onError={(e) => {
@@ -347,7 +346,7 @@ export function MainContent() {
       </div>
 
       {/* Deck */}
-      <div className="text-[#4A4A42] text-[17px] italic leading-7 text-left mt-[5px] mb-px pt-[5px] pb-px px-px font-montserrat md:text-[20px] md:leading-8 md:mb-[5px] md:pb-[5px] animate-fade-up">
+      <div className="text-[#4A4A42] text-[17px] italic leading-7 text-left mt-[5px] mb-px pt-[5px] pb-px px-px font-source-serif md:text-[20px] md:leading-8 md:mb-[5px] md:pb-[5px] animate-fade-up">
         New research into NAD+ decline is helping adults understand why they feel &ldquo;off&rdquo; — and what a
         little-known molecule called NMN might do about it.
       </div>
@@ -389,7 +388,7 @@ export function MainContent() {
       </div>
 
       <ImgPlaceholder
-        src="/images/gempages_537282813339108432-c6ad7e2f-25f6-461c-8d51-1d6e66ec5c22.webp"
+        src="/images/nad-decline.webp"
         alt="Up to 90% decline in NAD+ levels with age — NRX NMN supports longevity and healthy aging"
       />
 
@@ -414,7 +413,7 @@ export function MainContent() {
       {/* ── NMN ── */}
       <Heading text="Enter NMN: The Precursor Your Body Recognizes" />
       <ImgPlaceholder
-        src="/images/gempages_537282813339108432-d8abc8b6-db3e-4a2f-91c8-662e733c6139.webp"
+        src="/images/scientifically-backed.webp"
         alt="Scientifically backed — NMN 600mg, 100% proven safe daily, 75% increase in NAD+ levels"
       />
       <div className="reveal article-body">
@@ -433,11 +432,11 @@ export function MainContent() {
       {/* ── What NRX Is ── */}
       <Heading text="What NRX NMN® Actually Is" />
       <ImgPlaceholder
-        src="/images/gempages_537282813339108432-f9c7a4a8-7c45-4b95-b730-f6da3ca96b2f.webp"
+        src="/images/product-features.webp"
         alt="Løra NMN + Resveratrol — developed to support cellular energy, NAD+ levels, muscle function, cognitive health"
       />
       <ImgPlaceholder
-        src="/images/makes-different_5.jpg"
+        src="/images/supplement-facts.webp"
         alt="NRX NMN supplement facts — NMN 600mg, Trans-Resveratrol 600mg per serving"
       />
       <div className="reveal article-body">
@@ -461,7 +460,7 @@ export function MainContent() {
       {/* ── Who It's For ── */}
       <Heading text="Who This Is For (And Who It Isn't)" />
       <ImgPlaceholder
-        src="/images/makes-different_7.webp"
+        src="/images/cost-comparison.webp"
         alt="Save your money — get complete NMN + NAD+ support in one formula for $89 vs $209+ stacking separately"
       />
       <div className="reveal article-body">
@@ -485,7 +484,7 @@ export function MainContent() {
       {/* ── Bottom Line ── */}
       <Heading text="The Bottom Line" />
       <ImgPlaceholder
-        src="/images/makes-different_8.jpg"
+        src="/images/product-bottle.webp"
         alt="Løra NMN + Resveratrol — NRX NMN by Løra Ritual"
       />
       <div className="reveal article-body">
